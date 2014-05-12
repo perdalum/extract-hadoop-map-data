@@ -1,0 +1,43 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = '1.8'
+
+mainClassName = 'dk.statsbiblioteket.hadoop.utils.Main'
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:0.8'
+    }
+}
+
+apply plugin: 'shadow'
+
+shadow {
+    exclude 'META-INF/*DSA'
+    exclude 'META-INF/*.RSA'
+}
+
+dependencies {
+    compile 'org.jsoup:jsoup:1.7.3'
+
+    testCompile 'junit:junit:4.11'
+}
+
+run {
+    systemProperty 'extract.name', 'Per'
+}
+
+jar {
+  manifest {
+        attributes 'Main-Class': 'dk.statsbiblioteket.hadoop.utils.Main'
+  }
+}

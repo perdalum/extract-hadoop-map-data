@@ -1,6 +1,7 @@
 tags
 build
-gradle/
+gradle
+.gradle
 gradlew
 gradlew.bat
 

@@ -10,7 +10,6 @@ $ java -jar build/distributions/extract-hadoop-map-data-unspecified-shadow.jar <
 To get an idea of the run times here is the data from running the tool on a HTML table with 20.000 rows on a MacBook Air
 
 ```
-/Users/pmd/Statsbiblioteket/projekter/SCAPE/Nanite eksperiment
 dalum-air:Nanite eksperiment pmd$ time java -jar extract-hadoop-map-data-unspecified-shadow.jar Hadoop\ Job\ 0073/all\ MAP\ task\ list\ for\ 0073.html > Hadoop\ Job\ 0073/map-run-times.csv
 Will parse Hadoop Job 0073/all MAP task list for 0073.html to stdout
 
